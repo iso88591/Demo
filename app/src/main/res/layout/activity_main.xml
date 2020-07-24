@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <grg.research.demo.looperview.LooperView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:viewMoveTime="200"
+        app:viewMoveDivideTime="2000"
+        android:id="@+id/looperView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <grg.research.demo.holderview.HolderView
+        android:layout_width="match_parent"
+        android:id="@+id/holderView"
+        app:layout_constraintTop_toBottomOf="@id/looperView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@+id/v1"
+            app:layout_constraintGuide_begin="18dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:id="@+id/v2"
+            app:layout_constraintGuide_begin="68dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:text="sdfsdfsdfsdfsdfsdfdsf"
+            app:layout_constraintLeft_toLeftOf="@id/v1"
+            app:layout_constraintRight_toRightOf="@id/v2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:text="sdsdfsdlfslfsdlfjsdlfjs"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            android:layout_marginTop="6dp"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="left 0 top 10"
+            android:id="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@id/textView2"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            app:layout_constraintTop_toBottomOf="@id/textView3"
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv1"
+            android:layout_gravity="bottom|right"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </grg.research.demo.holderview.HolderView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

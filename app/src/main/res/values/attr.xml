@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LooperView">
+        <!--
+    private var moveTime = 500L
+    private var moveDivideTime = 5000L
+        -->
+        <attr name="viewMoveTime" format="integer" />
+        <attr name="viewMoveDivideTime" format="integer" />
+
+    </declare-styleable>
+
+</resources>
